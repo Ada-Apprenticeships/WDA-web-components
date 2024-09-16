@@ -6,15 +6,45 @@
     <title>My Web Components Project</title>
     <link rel="stylesheet" href="styles/main.css">
     <script src="components/my-header.js" type="module"></script>
-    <script src="components/my-footer.js" type="module"></script>
-    <script src="app.js" type="module"></script>
+    <script src="components/movie-card.js" type="module"></script>
+    <script src="components/movie-list.js" type="module"></script>
+    <script src="components/filter-list.js" type="module"></script>
+    <script src="app.js" defer></script>
 </head>
 <body>
     <my-header></my-header>
+    <label for="search"></label>
     <main>
         <h1>Welcome to My Web Components Project</h1>
         <p>This is the main content area.</p>
+        <p>Another p element</p>
+        <filter-input id="film-search"></filter-input>
     </main>
     <my-footer></my-footer>
+    <template id="movie-card-template">
+        <style>
+          .item {
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin: 5px 0;
+          }
+        </style>
+        <div class="item">
+          <h3>x</h3>
+          <p>y</p>
+        </div>
+    </template>
+    <template id="movie-list-template">
+        <style>
+          .list {
+            border: 1px solid #ccc;
+            padding: 10px;
+          }
+        </style>
+        <div class="list">
+          <h2>Item List</h2>
+          <ul id="items-container"></ul>
+        </div>
+      </template>
 </body>
 </html>
